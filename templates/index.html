@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FlaskChat Bot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="frame">
+    <header class="chat-header">
+      <div class="title">Motivation ChatBox</div>
+      <div class="subtitle">Ask anything, I’m here to help.</div>
+      <div class="quote">Small steps daily beat motivation.</div>
+    </header>
+
+    <main id="chat" class="chat-window" role="log" aria-live="polite">
+      <!-- initial bot welcome will be loaded by script (server provides start node) -->
+    </main>
+
+    <section class="controls">
+      <div id="options" class="options-row"></div>
+      <div class="input-row">
+        <input id="input" type="text" placeholder="Type a message or pick an option..." autocomplete="off" />
+        <button id="send">Send</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
